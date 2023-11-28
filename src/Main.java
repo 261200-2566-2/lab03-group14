@@ -2,16 +2,50 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
+        Character A = new Character("King",10,1);
+        Character B = new Character("Queen",10,1);
+        System.out.println(A.name);
+        System.out.println(B.name);
+        Sword E = new Sword("Exe",50);
+        Sword P = new Sword("pp",50);
+        Shield S = new Shield("shh",10);
+        System.out.println("King's Sword : "+E.damage);
+        A.equipSword(E);
+        System.out.println("Queen's hp : "+B.hp);
+        A.attack(B);
+        System.out.println("Queen's hp : "+B.hp);
+        B.hp = 200;
+        System.out.println("Queen's hp : "+B.hp);
+        System.out.println("King runSpeed : "+A.runSpeed);
+        System.out.println("Queen runSpeed : "+B.runSpeed);
+        A.equipSword(E);
+        B.equipShield(S);
+        System.out.println("King runSpeed : "+A.runSpeed);
+        System.out.println("Queen runSpeed : "+B.runSpeed);
+        System.out.println("King's damage : "+E.damage);
+        System.out.println("Queen's defense : "+S.defense);
+        A.attack(B);
+        System.out.println("Queen's hp : "+B.hp);
+        A.unEquipSword(P);
+        A.attack(B);
+        System.out.println("Queen's hp : "+B.hp);
+        A.unEquipSword(E);
+        B.unEquipShield(S);
+        System.out.println("King runSpeed : "+A.runSpeed);
+        System.out.println("Queen runSpeed : "+B.runSpeed);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println("level : "+A.level);
+        System.out.println("maxHp : "+A.maxHp);
+        System.out.println("maxMana : "+A.maxMana);
+        System.out.println("maxRunSpeed : "+A.maxRunSpeed);
+        A.levelUp();
+        System.out.println("level : "+A.level);
+        System.out.println("maxHp : "+A.maxHp);
+        System.out.println("maxMana : "+A.maxMana);
+        System.out.println("maxRunSpeed : "+A.maxRunSpeed);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        System.out.println("runSpeed : "+A.runSpeed);
+        System.out.println("maxRunSpeed : "+A.maxRunSpeed);
+
     }
 }
