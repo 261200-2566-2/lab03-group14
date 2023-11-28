@@ -1,13 +1,13 @@
 public class Shield {
-    double defense;
-    String name;
-    int level=1;
+    public double defense;
+    public final String name;
+    public int level=1;
 
-    Shield(String _name,int baseDefense){
+    public Shield(String _name,int baseDefense){
         name = _name;
         defense = baseDefense;
     }
-    void levelUp() {
+    public void levelUp() {
         defense = defense*(1+(0.05*level));
     }
 }

@@ -10,7 +10,11 @@ public class Main {
         Sword P = new Sword("pp",50);
         Shield S = new Shield("shh",10);
         System.out.println("King's Sword : "+E.damage);
+        A.equipSword(E);
+        System.out.println("Queen's hp : "+B.hp);
         A.attack(B);
+        System.out.println("Queen's hp : "+B.hp);
+        B.hp = 200;
         System.out.println("Queen's hp : "+B.hp);
         System.out.println("King runSpeed : "+A.runSpeed);
         System.out.println("Queen runSpeed : "+B.runSpeed);
@@ -30,30 +34,18 @@ public class Main {
         System.out.println("King runSpeed : "+A.runSpeed);
         System.out.println("Queen runSpeed : "+B.runSpeed);
 
-//        System.out.println("level : "+A.level);
-//        System.out.println("maxHp : "+A.maxHp);
-//        System.out.println("maxMana : "+A.maxMana);
-//        System.out.println("maxRunSpeed : "+A.maxRunSpeed);
-//        A.levelUp();
-//        System.out.println("level : "+A.level);
-//        System.out.println("maxHp : "+A.maxHp);
-//        System.out.println("maxMana : "+A.maxMana);
-//        System.out.println("maxRunSpeed : "+A.maxRunSpeed);
+        System.out.println("level : "+A.level);
+        System.out.println("maxHp : "+A.maxHp);
+        System.out.println("maxMana : "+A.maxMana);
+        System.out.println("maxRunSpeed : "+A.maxRunSpeed);
+        A.levelUp();
+        System.out.println("level : "+A.level);
+        System.out.println("maxHp : "+A.maxHp);
+        System.out.println("maxMana : "+A.maxMana);
+        System.out.println("maxRunSpeed : "+A.maxRunSpeed);
 
-//        System.out.println("runSpeed : "+A.runSpeed);
-//        System.out.println("maxRunSpeed : "+A.maxRunSpeed);
-//        A.useSword();
-//        System.out.println("runSpeed + useSword : "+A.runSpeed);
-//        A.useNoSword();
-//        System.out.println("runSpeed + useNoSword: "+A.runSpeed);
-//        System.out.println("runSpeed : "+A.runSpeed);
-//        A.useShield();
-//        System.out.println("runSpeed + useShield : "+A.runSpeed);
-//        A.useNoShield();
-//        System.out.println("runSpeed + useNoShield: "+A.runSpeed);
-//        A.useShield();
-//        A.useSword();
-//        System.out.println("runSpeed both equip: "+A.runSpeed);
+        System.out.println("runSpeed : "+A.runSpeed);
+        System.out.println("maxRunSpeed : "+A.maxRunSpeed);
 
     }
 }

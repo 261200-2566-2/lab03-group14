@@ -1,0 +1,27 @@
+how and where to store data
+-data are stored in the Character Class as instances fields such as name, level, hp, mana, runSpeed, etc.
+-For Sword and Shield data are stored in their own class as instances fields such as name, damage or defense, and level.
+-The fields are declared with the public modifier, making them accessible from outside the class.
+
+
+what operations are needed
+Character Class:
+-levelUp(): Increases the character's level and updates the maxHp, maxMana, and maxRunSpeed.
+-attack(Character target): Take an attack on another character, considering equipped sword and shield for damage calculation and reduction.
+-equipSword(Sword sword): Equips a sword and updating the character's run speed.
+-equipShield(Shield shield): Equips a shield and updating the character's run speed.
+-unEquipSword(Sword sword): Unequips a sword and resetting the character's run speed if the removed sword is the currently equipped one.
+-unEquipShield(Shield shield): Unequips a shield and resetting the character's run speed if the removed shield is the currently equipped one.
+
+Sword Class:
+-levelUp(): Increases the sword's level and updates the damage value based on the level.
+
+Shield Class:
+-levelUp(): Increases the shield's level and updates the defense value based on the level.
+
+
+how and where to compute information
+-Computation of maxHp, maxMana,and maxRunSpeed is done in the levelUp() method when the character levels up.
+-Damage calculation during an attack is performed in the attack(Character target) method.
+-Equipping and unequipping items affect the character's run speed, and these computations are done in the equipSword, equipShield, unEquipSword, and unEquipShield methods.
+-Computation of the updated damage for a sword and defense for a shield is done in the levelUp() method of each respective class.

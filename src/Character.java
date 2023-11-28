@@ -1,23 +1,23 @@
 public class Character {
-    String name;
-    int level;
-    double hp;
-    double mana;
-    double runSpeed;
-    double defRunSpeed;
-    double maxHp;
-    double maxMana;
-    double maxRunSpeed;
-    Sword equippedSword;
-    Shield equippedShield;
-    void levelUp() {
+    public final String name;
+    public int level;
+    public double hp;
+    public double mana;
+    public double runSpeed;
+    private final double defRunSpeed;
+    public double maxHp;
+    public double maxMana;
+    public double maxRunSpeed;
+    private Sword equippedSword;
+    private Shield equippedShield;
+    public void levelUp() {
         level++;
         maxHp = 100+(10*level);
         maxMana = 50+(2*level);
         maxRunSpeed = runSpeed+(0.1+(0.03*level));
 
     }
-    void attack(Character target) {
+    public void attack(Character target) {
         double damageDealt = 0;
         if(equippedSword == null){
             System.out.println(name + " can't attack without a sword");
@@ -37,7 +37,7 @@ public class Character {
             System.out.println(target.name + " is now dead");
         }
     }
-    Character(String _name,int _level,double _baseRunSpeed){
+    public Character(String _name,int _level,double _baseRunSpeed){
         name = _name;
         level = _level;
         runSpeed = _baseRunSpeed;
@@ -49,16 +49,16 @@ public class Character {
         mana = maxMana;
         maxRunSpeed = runSpeed+(0.1+(0.03*level));
     }
-    void equipSword(Sword sword) {
+    public void equipSword(Sword sword) {
         equippedSword = sword;
         runSpeed -= runSpeed * (0.1 + (0.04 * level));
     }
 
-    void equipShield(Shield shield) {
+    public void equipShield(Shield shield) {
         equippedShield = shield;
         runSpeed -= runSpeed * (0.1 + (0.06 * level));
     }
-    void unEquipSword(Sword sword){
+    public void unEquipSword(Sword sword){
         if(equippedSword == sword){
             equippedSword = null;
         }else{
@@ -66,7 +66,7 @@ public class Character {
         }
         runSpeed = defRunSpeed;
     }
-    void unEquipShield(Shield shield){
+    public void unEquipShield(Shield shield){
         if(equippedShield == shield){
             equippedShield = null;
         }else{

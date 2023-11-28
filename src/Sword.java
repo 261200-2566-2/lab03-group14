@@ -1,13 +1,13 @@
 public class Sword {
-    double damage;
-    String name;
-    int level=1;
+    public double damage;
+    public final String name;
+    public int level=1;
 
-    Sword(String _name,int baseDamage){
+    public Sword(String _name,int baseDamage){
         name = _name;
         damage = baseDamage;
     }
-    void levelUp() {
+    public void levelUp() {
         damage = damage*(1+(0.1*level));
     }
 }
